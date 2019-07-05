@@ -1,0 +1,26 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    image: britishpearl/bpapi-demo-app-backend
+    ports:
+      - "3001:3001"
+    environment:
+      # Values taken from .env file
+      - BPAPI_CLIENT_ID=${BPAPI_CLIENT_ID}
+      - BPAPI_CLIENT_SECRET=${BPAPI_CLIENT_SECRET}
+      - BPAPI_REDIRECT_URI=${BPAPI_REDIRECT_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - GOOGLE_RECAPTCHA_SECRET_KEY=${GOOGLE_RECAPTCHA_SECRET_KEY}
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    image: britishpearl/bpapi-demo-app-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      # Values taken from .env file
+      - REACT_APP_GOOGLE_SITE_KEY=${REACT_APP_GOOGLE_SITE_KEY}
+      - INTERNAL_API_URL=http://backend:3001

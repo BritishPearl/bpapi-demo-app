@@ -1,0 +1,86 @@
+{
+    "extends": ["tslint:recommended", "tslint:latest", "tslint-react"],
+    "rulesDirectory": ["node_modules/tslint-react/rules", "node_modules/tslint/lib" ],
+    "linterOptions": {
+      "exclude": [
+          "./src/registerServiceWorker.ts"
+      ]
+    },
+    "rules": {
+        "max-line-length": {
+            "options": [160]
+        },
+        "new-parens": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
+        "no-consecutive-blank-lines": true,
+        "no-console": [false],
+        "align": false,
+        "ban": false,
+        "class-name": true,
+        "curly": true,
+        "eofline": true,
+        "forin": true,
+        "import-spacing": true,
+        "interface-name": [true, "never-prefix"],
+        "jsdoc-format": true,
+        "label-position": true,
+        "member-access": false,
+        "no-any": false,
+        "no-construct": true,
+        "no-debugger": false,
+        "no-shadowed-variable": true,
+        "no-duplicate-variable": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-inferrable-types": false,
+        "no-internal-module": true,
+        "no-require-imports": false,
+        "no-string-literal": false,
+        "no-switch-case-fall-through": true,
+        "no-trailing-whitespace": true,
+        "no-unused-expression": true,
+        "no-var-keyword": true,
+        "no-var-requires": true,
+        "object-literal-sort-keys": false,
+        "quotemark": [true, "single", "avoid-escape"],
+        "radix": false,
+        "semicolon": true,
+        "switch-default": true,
+        "trailing-comma": [true, {
+            "multiline": "always",
+            "singleline": "never"
+        }],
+        "typedef": [true,
+            "call-signature",
+            "parameter",
+            "property-declaration",
+            "variable-declaration",
+            "member-variable-declaration"
+        ],
+        "typedef-whitespace": [true, {
+            "call-signature": "nospace",
+            "index-signature": "nospace",
+            "parameter": "nospace",
+            "property-declaration": "nospace",
+            "variable-declaration": "nospace"
+        }],
+        "use-strict": false,
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+        "whitespace": [true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ],
+        "no-null-keyword": true,
+        "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
+        "ordered-imports": [false],
+        "jsx-alignment": false,
+        "jsx-no-multiline-js": false,
+        "no-submodule-imports": false
+    }
+  }
+  
