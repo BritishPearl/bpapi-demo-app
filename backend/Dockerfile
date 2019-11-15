@@ -4,10 +4,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
 ENV PORT=3001
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]

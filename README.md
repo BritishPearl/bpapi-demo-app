@@ -7,27 +7,27 @@ The project consists of a backend Node.js application and a frontend React appli
 
 You can run the applications in three ways:
 
-* locally via `npm` commands
+* locally via `yarn` commands
 * locally via `docker-compose`
 * remotely on Heroku using Heroku CLI
 
 
-## Running the apps locally using npm
+## Running the apps locally using yarn
 
 ### Backend
 
 ```bash
 cd backend
-npm install
-BPAPI_CLIENT_ID=xxx BPAPI_CLIENT_SECRET=yyy BPAPI_REDIRECT_URI=http://example.com npm start
+yarn install
+BPAPI_CLIENT_ID=xxx BPAPI_CLIENT_SECRET=yyy BPAPI_REDIRECT_URI=http://example.com yarn start
 ```
 
 ### Frontend
 
 ```bash
 cd frontend
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 You can view the frontend app in the browser under http://localhost:3000.
@@ -43,7 +43,7 @@ cp demo.env .env
 Edit the `.env` files to reflect your desired configuration.
 
 ```bash
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 You can view the frontend app in the browser under http://localhost:3000.
